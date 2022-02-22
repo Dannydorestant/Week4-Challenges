@@ -1,3 +1,5 @@
+import string
+
 wk4_1 = 12 + 12
 print(wk4_1)
 
@@ -73,6 +75,8 @@ while adding:
     if more == "NO":
         adding: bool = False
         print(f'Your Grand Total is {wk4_13:g} \n')
+    else:
+        print(f'Your Grand Total is {wk4_13:g} \n')
 
 
 wk4_14 = ['red', 'green', 'blue', 'orange', 'white', 'black', 'gold', 'purple', 'yellow', 'magenta']
@@ -91,9 +95,82 @@ else:
     print("Failing")
 
 
-wk4_16 = int(input("Enter a number: "))
-num2 = int(input("Now enter a much HIGHER number: "))
+wk4_16 = int(input("Enter your Starting number: "))
+num2 = int(input("Enter your Ending number: "))
+num2 = num2 + 1   # Include the last number in the range in the sum, not sure if necessary
+result = 0
 for i in range(wk4_16, num2):
+    result += i
+print(f'All the numbers in your Range add up to {result}')
+
+wk4_17 = range(100, -1, -1)
+for i in wk4_17:
+    print(i)
+
+
+wk4_18 = input("Enter a letter: ").lower()
+letter = list(string.ascii_lowercase)
+
+print(letter.index(wk4_18))
+
+wk4_19 = input("Please type in the following letters: ABCD: ").upper()
+a = wk4_19[0]
+b = wk4_19[1]
+c = wk4_19[2]
+d = wk4_19[3]
+
+print(f'{a}/{b}*{c})-{d}')
+
+wk4_20 = int(input("Enter a number: "))
+if wk4_20 % 2 == 0:
+    print(f'{wk4_20} is an Even Number')
+else:
+    print(f'{wk4_20} is an Odd Number')
+print("\n")
+
+wk4_21 = int(input("Enter a number: "))
+print("This is too hard, or i'm dumb")
+print("\n")
+
+wk4_22 = int(input("Set a Max Number: "))
+for i in range(0, wk4_22 + 1):
+    if i % 2 != 0:
+        print(i)
+print("\n")
+wk4_23 = list(string.ascii_lowercase)
+for i in wk4_23:
+    letters = wk4_23.index(i) + 1
+    if letters % 3 == 0:
+        print(i)
+print("\n")
+wk4_24 = "I have no idea what you mean by this???"
+a = 2
+b = 3
+c = 20
+d = 3
+print(f'{a}{b}')
+print(c + d)
+print("\n")
+wk4_25 = list(string.ascii_lowercase)
+shift = int(input("You are at letter A. How many letters would you like to shift to the right? "))
+looper: bool = True
+current_letter = 0
+while looper:
+    for i in wk4_25:
+        letters = wk4_25.index(i)
+        if letters == current_letter + shift:
+            letter = letters
+            print(f'You are now at letter {wk4_25[letter]}')
+    looper: bool = False
+
+
+
+
+
+
+
+
+
 
 
 
